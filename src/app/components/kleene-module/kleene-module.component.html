@@ -1,0 +1,24 @@
+<div class=" flex flex-col items-center justify-center h-5/6 min-w-max">
+    <h2 class="text-center text-9xl mt-16">Kleene</h2>
+    <div class="bg-slate-900 w-3/4 flex flex-row items-center justify-center p-5">
+        <div class=" flex flex-col items-stretch justify-start rounded-lg h-1/2 m-3">
+            <p class="basis-1/3 text-center" for="">Ingrese una palabra</p>
+            <input class=" bg-gray-600 basis-1/3  rounded-sm "  type="text" id="inputWord" #inputWord/>
+            <button class="basis-1/3 bg-slate-800 p-3 rounded-md hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 m-3"
+            type="button" (click)="addWord(inputWord.value)">Agregar</button>
+        </div>
+        <div class="flex flex-col items-center m-3">
+            <p>Lenguaje actual</p>
+            <textarea class="bg-gray-600 h-64 m-5 rounded-sm text-clip" type="text" name="">{{lenguageOut}}</textarea>
+            <p class="text-center">nivel de la cerradura de Kleene desea mostrar</p>
+            <input class="bg-gray-600 w-1/4 m-3 rounded-sm" type="text" #inputLevel>
+            <button class="bg-slate-800 p-3 rounded-md hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" type="button" (click)="generateKleene(+inputLevel.value)">Generar</button>
+            
+        </div>
+        <div class="flex flex-col items-stretch justify-between m-3">
+            <p class="text-center" for="">Resultado</p>
+            <textarea class="bg-gray-600  h-72 w-full m-5 rounded-sm text-clip" id="result">{{resultOut}}</textarea>
+        </div>
+    </div>
+    
+</div>
